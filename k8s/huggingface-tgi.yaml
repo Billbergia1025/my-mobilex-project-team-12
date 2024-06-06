@@ -110,15 +110,15 @@ spec:
     requests:
       storage: 100Gi
   storageClassName: ceph-filesystem
-# ---
-# apiVersion: v1
-# kind: Secret
-# metadata:
-#   name: huggingface-hub
-#   labels:
-#     app: text-generation
-# stringData:
-#   # TODO(user): change your own token!
-#   # HELP: Go to https://huggingface.co/settings/tokens
-#   HUGGING_FACE_HUB_TOKEN: "TODO"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: huggingface-hub
+  labels:
+    app: text-generation
+stringData:
+  # TODO(user): change your own token!
+  # HELP: Go to https://huggingface.co/settings/tokens
+  HUGGING_FACE_HUB_TOKEN: "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"
 

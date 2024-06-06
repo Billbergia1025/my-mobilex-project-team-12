@@ -4,8 +4,8 @@ kind: Ingress
 metadata:
   name: gateway
   annotations:
-    cert-manager.io/cluster-issuer: example.com # TODO(user): change to your domain
-    kubernetes.io/ingress.class: example.com # TODO(user): change to your domain
+    cert-manager.io/cluster-issuer: https://computer-system-team-12.dev.mobilex.kr # TODO(user): change to your domain
+    kubernetes.io/ingress.class: https://computer-system-team-12.dev.mobilex.kr # TODO(user): change to your domain
     nginx.ingress.kubernetes.io/proxy-body-size: 200M
     nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
@@ -14,10 +14,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - dev.example.com # TODO(user): change to your domain
-      secretName: dev.example.com-certs # TODO(user): change to your domain
+        - dev.https://computer-system-team-12.dev.mobilex.kr # TODO(user): change to your domain
+      secretName: dev.https://computer-system-team-12.dev.mobilex.kr-certs # TODO(user): change to your domain
   rules:
-    - host: dev.example.com # TODO(user): change to your domain
+    - host: dev.https://computer-system-team-12.dev.mobilex.kr # TODO(user): change to your domain
       http:
         paths:
           - path: /
